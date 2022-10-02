@@ -9,6 +9,8 @@ import * as qs from 'query-string';
 import Highlights from './highlights';
 import DateSlider from './Options/DateSlider';
 import SpeedAltTrack from './speedAltTrack';
+import Page from './page';
+import Iss3D from './iss3D';
 
 // Some config
 const UseDateSlider = false;
@@ -202,6 +204,8 @@ class App extends Component {
                 <Info stations={stations} refMode={this.state.referenceFrame} />
                 <Search stations={this.state.stations} onResultClick={this.handleSearchResultClick} />
                 <SpeedAltTrack />
+                <Page />
+                <Iss3D />
                 <SelectedStations selected={selected} onRemoveStation={this.handleRemoveSelected} onRemoveAll={this.handleRemoveAllSelected} />
                 {UseDateSlider && <DateSlider min={initialDate} max={maxMs} value={currentDate} onChange={this.handleDateChange} onRender={this.renderDate} />}
                 <div ref={c => this.el = c} style={{ width: '99%', height: '99%' }} />
