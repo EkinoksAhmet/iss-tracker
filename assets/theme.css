@@ -9,6 +9,7 @@ body {
     color: white;
     font-family: Montserrat, sans-serif;
     font-size: 12px;
+    overflow: hidden;
 }
 
 h1 {
@@ -136,4 +137,111 @@ h1 {
         height: 60vh;
         max-width: 70vw;
     }
+}
+
+.iss-cam {
+    position: fixed;
+    right: 0;
+}
+
+.iss-cam iframe {
+    border-left: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+}
+
+.iss-cam button {
+    background-color: #041119;
+    border: 0.5px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    position: fixed;
+    right: 0;
+}
+
+.Info a {
+    color: white;
+}
+
+.sa-track {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.sa-track__container {
+    width: 600px;
+    height: 180px;
+    background: #1E1E1E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.velocity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.velocity p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-right: 15px;
+}
+
+/* Align circle with p to center*/
+.circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circle p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    
+    color: #000000;
+}
+
+.sa-track__container hr {
+    width: 0.75px;
+    height: 100px;
+    background: #FFFFFF;
+    margin: 0 20px;
+}
+
+.sa-track button {
+    background-color: #041119;
+    border: 0.5px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    right: 0;
+    border-top-left-radius: 30px;
 }

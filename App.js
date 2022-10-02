@@ -4,10 +4,11 @@ import { Engine } from './engine';
 import Info from './Info';
 import Search from './Search/Search';
 import SelectedStations from './Selection/SelectedStations';
-import Fork from './fork';
+import Fork from './cam';
 import * as qs from 'query-string';
 import Highlights from './highlights';
 import DateSlider from './Options/DateSlider';
+import SpeedAltTrack from './speedAltTrack';
 
 // Some config
 const UseDateSlider = false;
@@ -188,7 +189,9 @@ class App extends Component {
     }
 
     render() {
-        const { selected, stations, initialDate, currentDate } = this.state;
+        const {initialDate, currentDate } = this.state;
+        const {selected} = 'ISS - ORBIT';
+        const {stations} = 'ISS - ORBIT';
 
         const maxMs = initialDate + DateSliderRangeInMilliseconds;
 
@@ -198,6 +201,7 @@ class App extends Component {
                 <Highlights query={this.state.query} total={this.state.queryObjectCount} />
                 <Info stations={stations} refMode={this.state.referenceFrame} />
                 <Search stations={this.state.stations} onResultClick={this.handleSearchResultClick} />
+                <SpeedAltTrack />
                 <SelectedStations selected={selected} onRemoveStation={this.handleRemoveSelected} onRemoveAll={this.handleRemoveAllSelected} />
                 {UseDateSlider && <DateSlider min={initialDate} max={maxMs} value={currentDate} onChange={this.handleDateChange} onRender={this.renderDate} />}
                 <div ref={c => this.el = c} style={{ width: '99%', height: '99%' }} />
